@@ -60,7 +60,7 @@
             $('form').submit(function () {
                 const thing = $('input[name="thing"]').val();
                 const price  = $('input[name="price"]').val();
-                const msg = `${price}円で\n${thing}を\n買ったよ`;
+                const msg = `【登録】\n${price}円で\n${thing}を\n買ったよ`;
                 sendText(msg);
                 return false;
             });
