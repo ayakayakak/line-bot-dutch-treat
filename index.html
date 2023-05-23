@@ -61,6 +61,7 @@
                 const thing = $('input[name="thing"]').val();
                 const price  = $('input[name="price"]').val();
                 const msg = `【登録】\n${price}円で\n${thing}を\n買ったよ`;
+                console.log(msg)
                 sendText(msg);
                 return false;
             });
