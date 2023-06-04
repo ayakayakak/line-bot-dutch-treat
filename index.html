@@ -17,6 +17,10 @@
         <div>
             <input class="form-control w-100 mt-1" name="price" type="number" required>
         </div>
+        <p class="mt-3">コメント</p>
+        <div>
+            <textarea class="form-control w-100 mt-1" name="comment"></textarea>
+        </div>
         <input type="submit" class="mt-4 btn btn-primary" value="送信">
     </form>
 
@@ -60,8 +64,8 @@
             $('form').submit(function () {
                 const thing = $('input[name="thing"]').val();
                 const price  = $('input[name="price"]').val();
-                const msg = `【登録】\n${price}円で\n${thing}を\n買ったよ`;
-                console.log(msg)
+                const comment  = $('textarea[name="comment"]').val();
+                const msg = `【登録】\n${price}円で\n${thing}を\n買ったよ\n\nコメント\n${comment || 'なし'}`;
                 sendText(msg);
                 return false;
             });
